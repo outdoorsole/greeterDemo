@@ -18,8 +18,8 @@ class ViewController: UIViewController {
     // IBAction (function)
     @IBAction func greetButton(_ sender: UIButton) {
         print("greet button")
-        if nameTextField.hasText {
-            // Do something
+        if nameTextField.text != nil {
+            // Need to unwrap the String optional because "hello" is a String type (both need to be the same type)
             greetingLabel.text = "hello " + nameTextField.text!
         }
     }
@@ -28,7 +28,6 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         print("viewDidLoad was called")
-        greetingLabel.text = "hello"
     }
 
 }
