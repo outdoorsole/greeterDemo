@@ -9,12 +9,13 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    
     // IBOutlet attribute (implicitly unwrapped optional)
     // connection from label into class
     @IBOutlet weak var greetingLabel: UILabel!
     @IBOutlet weak var nameTextField: UITextField!
-    
+    @IBOutlet weak var countLabel: UILabel!
+
     // IBAction (function)
     @IBAction func greetButton(_ sender: UIButton) {
         print("greet button")
@@ -22,6 +23,18 @@ class ViewController: UIViewController {
             if nameTextField.hasText {
             // Need to unwrap the String optional because "hello" is a String type (both need to be the same type)
             greetingLabel.text = "Hello " + nameTextField.text! + "!"
+            }
+        }
+    }
+    
+    @IBAction func buttonTapped(_ sender: UIButton) {
+        print("button tapped")
+        if nameTextField != nil {
+            // Check the value
+            print(nameTextField.text!.count)
+            if nameTextField.hasText {
+                // Update the label with the character count
+                countLabel.text = String(nameTextField.text!.count)
             }
         }
     }
