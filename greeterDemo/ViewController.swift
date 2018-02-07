@@ -14,6 +14,11 @@ class ViewController: UIViewController {
     // connection from label into class
     @IBOutlet weak var greetingLabel: UILabel!
     
+    // IBAction (function)
+    @IBAction func greetButton(_ sender: UIButton) {
+        print("greet button")
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
