@@ -19,8 +19,10 @@ class ViewController: UIViewController {
     @IBAction func greetButton(_ sender: UIButton) {
         print("greet button")
         if nameTextField.text != nil {
+            if nameTextField.hasText {
             // Need to unwrap the String optional because "hello" is a String type (both need to be the same type)
             greetingLabel.text = "hello " + nameTextField.text!
+            }
         }
     }
     
