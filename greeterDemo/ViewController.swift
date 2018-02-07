@@ -20,7 +20,7 @@ class ViewController: UIViewController {
         print("greet button")
         if nameTextField.hasText {
             // Do something
-            greetingLabel.text = nameTextField.text
+            greetingLabel.text = "hello " + nameTextField.text!
         }
     }
     
