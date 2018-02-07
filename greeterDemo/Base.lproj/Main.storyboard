@@ -58,6 +58,7 @@
                     </view>
                     <connections>
                         <outlet property="greetingLabel" destination="3Ww-YB-9rv" id="JfE-lo-CiS"/>
+                        <outlet property="nameTextField" destination="KMs-7b-WbM" id="IV5-ci-1gx"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
